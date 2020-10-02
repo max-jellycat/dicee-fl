@@ -19,15 +19,23 @@ class App extends StatelessWidget {
           backgroundColor: Colors.red,
         ),
         backgroundColor: Colors.red.shade600,
-        body: Row(
-          children: <Widget>[
-            Expanded(
-              child: Image.asset('images/dice-1.png'),
-            ),
-            Expanded(
-              child: Image.asset('images/dice-2.png'),
-            ),
-          ],
+        body: Center(
+          child: Row(
+            children: <Widget>[
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Image.asset('images/dice-1.png'),
+                ),
+              ),
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Image.asset('images/dice-2.png'),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
