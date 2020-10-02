@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 void main() {
   runApp(
@@ -37,11 +38,7 @@ class _DicePageState extends State<DicePage> {
               child: Image.asset('images/dice-$leftDieNumber.png'),
               onPressed: () {
                 setState(() {
-                  if (leftDieNumber < 6) {
-                    leftDieNumber += 1;
-                  } else {
-                    leftDieNumber = 1;
-                  }
+                  leftDieNumber = Random().nextInt(6) + 1;
                 });
               },
               padding: EdgeInsets.all(16.0),
@@ -52,11 +49,7 @@ class _DicePageState extends State<DicePage> {
               child: Image.asset('images/dice-$rightDieNumber.png'),
               onPressed: () {
                 setState(() {
-                  if (rightDieNumber < 6) {
-                    rightDieNumber += 1;
-                  } else {
-                    rightDieNumber = 1;
-                  }
+                  rightDieNumber = Random().nextInt(6) + 1;
                 });
               },
               padding: EdgeInsets.all(16.0),
